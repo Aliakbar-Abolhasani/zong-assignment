@@ -62,7 +62,8 @@ namespace ZongDemo.Gameplay.Movement
                 _currentSpeed = 0;
             }
 
-            _characterController.Move(direction.normalized * (_currentSpeed * Time.deltaTime));
+            // used the simple move function because it automatically applies the gravity since we don't have jump action
+            _characterController.SimpleMove(direction.normalized * _currentSpeed);
         }
 
         private void HandleRotation()
