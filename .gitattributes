@@ -17,6 +17,7 @@
 *.shadergraph           text eol=lf
 *.txt                   text eol=lf
 *.DotSettings           text eol=lf
+*.InputActions          text eol=lf
 
 # Code files
 *.sln                   text eol=crlf
