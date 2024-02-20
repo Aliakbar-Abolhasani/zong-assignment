@@ -18,7 +18,7 @@
 *.txt                   text eol=lf
 *.DotSettings           text eol=lf
 *.InputActions          text eol=lf
-
+*.lighting              text eol=lf
 # Code files
 *.sln                   text eol=crlf
 *.csproj                text eol=crlf
