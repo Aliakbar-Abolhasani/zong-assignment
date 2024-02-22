@@ -9,7 +9,6 @@ namespace ZongDemo.Gameplay.Movement
     /// </summary>
     public class MovementInputs : MonoBehaviour, IMovementInputs
     {
-        [SerializeField] private InputActionAsset _inputActionAsset;
         [SerializeField] private InputActionProperty _lookAction;
         [SerializeField] private InputActionProperty _movementAction;
         [SerializeField] private InputActionProperty _sprintAction;
@@ -35,13 +34,11 @@ namespace ZongDemo.Gameplay.Movement
 
         private void OnEnable()
         {
-            _inputActionAsset.Enable();
             SubscribeActions();
         }
 
         private void OnDisable()
         {
-            _inputActionAsset.Disable();
             UnsubscribeActions();
         }
 
