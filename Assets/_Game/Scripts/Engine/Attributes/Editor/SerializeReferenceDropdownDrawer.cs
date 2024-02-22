@@ -51,7 +51,14 @@ namespace ZongDemo.Engine.Attributes.Editor
 
         private static Type[] GetClasses(Type baseType)
         {
-            return Assembly.GetAssembly(baseType).GetTypes().Where(t => t.IsClass && !t.IsAbstract && baseType.IsAssignableFrom(t)).ToArray();
+            return Assembly.GetAssembly(baseType)
+                .GetTypes()
+                .Where(t => t.IsClass
+                            && !t.IsAbstract
+                            && baseType.IsAssignableFrom(t)
+                            // SerializeReference doesn't support classes that inherit from MonoBehavior
+                            && !typeof(MonoBehaviour).IsAssignableFrom(t))
+                .ToArray();
         }
     }
 }
