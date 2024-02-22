@@ -36,6 +36,11 @@ namespace ZongDemo.Gameplay.Objectives
                 }
 
                 _actionToExecute = _conditionResult == ConditionResult.Success ? _trueAction : _falseAction;
+                if (_actionToExecute == null)
+                {
+                    return ActionStatus.Success;
+                }
+
                 _actionToExecute.OnStart();
             }
 
