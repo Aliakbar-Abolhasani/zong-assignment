@@ -2,7 +2,35 @@
     "name": "GameInputs",
     "maps": [
         {
-            "name": "Gameplay",
+            "name": "Generic",
+            "id": "7db2dbf2-e31e-4366-babd-43f11679ed0c",
+            "actions": [
+                {
+                    "name": "UI Toggle",
+                    "type": "Button",
+                    "id": "3a823093-49c9-48c7-b7e6-c3e22166b7d6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "133a3e54-dc7b-440a-9aa0-e59e66cf9d20",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UI Toggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player",
             "id": "4494aee4-09cb-4de8-9079-1efc453529cc",
             "actions": [
                 {
@@ -28,6 +56,15 @@
                     "type": "PassThrough",
                     "id": "bb2fd487-6599-48c9-822a-140cc61d7ca2",
                     "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "14b75940-ef4b-478c-82bd-87b6774cb833",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -154,8 +191,25 @@
                     "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd032985-430d-42fc-878a-b285b3f6e76a",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "5e4061c3-1e90-4d76-ae52-c5bfa50c7dc1",
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": []

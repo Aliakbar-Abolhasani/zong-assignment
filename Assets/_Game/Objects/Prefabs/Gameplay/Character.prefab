@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 2507867570377023330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 421497820506962461}
   m_Layer: 0
-  m_Name: Graphics
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 5611323120678338716}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -213,7 +213,6 @@ GameObject:
   - component: {fileID: 4316983976124671777}
   - component: {fileID: 2009610903019336232}
   - component: {fileID: 8661161129235947488}
-  - component: {fileID: 428032842871826046}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -230,12 +229,13 @@ Transform:
   m_GameObject: {fileID: 6451125922303560650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.151, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2060305588459636862}
   - {fileID: 421497820506962461}
+  - {fileID: 7260145211178996616}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &4316983976124671777
@@ -263,7 +263,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2009610903019336232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,8 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac59ce68f47495c9e463099493afcdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputActionAsset: {fileID: -944628639613478452, guid: c833c9fe363c6b44d876114f694a86a7,
-    type: 3}
   _lookAction:
     m_UseReference: 1
     m_Action:
@@ -336,18 +334,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 2221658678523797108, guid: c833c9fe363c6b44d876114f694a86a7,
       type: 3}
---- !u!114 &428032842871826046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6451125922303560650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5e7a11f1c846ce95f85d5a20346026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7955573427483762257
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,3 +417,65 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9049023639816342747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7260145211178996616}
+  - component: {fileID: 8341105381545416424}
+  m_Layer: 0
+  m_Name: Interactor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7260145211178996616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9049023639816342747}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1853775815675299908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8341105381545416424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9049023639816342747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba2579a011549929d8140d3fa740750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _origin: {fileID: 2060305588459636862}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  _rayDistance: 100
+  _interactionButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Interaction Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: dd3fb22a-e9fa-4698-9ec8-241c5590bfbc
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -7405232829334796700, guid: c833c9fe363c6b44d876114f694a86a7,
+      type: 3}
