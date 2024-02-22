@@ -22,7 +22,7 @@ namespace ZongDemo.Core.UI.TabSystem
             }
         }
 
-        private void Start()
+        private void OnEnable()
         {
             if (_defaultTab != null && _tabs.Contains(_defaultTab))
             {
