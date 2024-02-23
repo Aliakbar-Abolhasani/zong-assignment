@@ -38,8 +38,12 @@ namespace ZongDemo.Gameplay.Interactions
         {
             if (!Physics.Raycast(_origin.position, _origin.forward, out var hit, _rayDistance, _layerMask))
             {
-                SetActiveInteractableState(InteractionState.Normal);
-                ActiveInteractable = null;
+                if (ActiveInteractable)
+                {
+                    SetActiveInteractableState(InteractionState.Normal);
+                    ActiveInteractable = null;
+                }
+
                 return;
             }
 
@@ -47,7 +51,7 @@ namespace ZongDemo.Gameplay.Interactions
             {
                 var interactable = reference.Interactable;
                 // Deselect previous one
-                if (ActiveInteractable != null)
+                if (ActiveInteractable)
                 {
                     if (ActiveInteractable == interactable)
                     {
@@ -60,7 +64,7 @@ namespace ZongDemo.Gameplay.Interactions
                 ActiveInteractable = interactable;
                 SetActiveInteractableState(InteractionState.Hover);
             }
-            else if (ActiveInteractable != null)
+            else if (ActiveInteractable)
             {
                 SetActiveInteractableState(InteractionState.Normal);
                 ActiveInteractable = null;
@@ -69,7 +73,7 @@ namespace ZongDemo.Gameplay.Interactions
 
         private void OnSelection(InputAction.CallbackContext ctx)
         {
-            if (ActiveInteractable != null)
+            if (ActiveInteractable)
             {
                 SetActiveInteractableState(InteractionState.Select);
             }
@@ -77,7 +81,7 @@ namespace ZongDemo.Gameplay.Interactions
 
         private void OnDeselection(InputAction.CallbackContext ctx)
         {
-            if (ActiveInteractable != null && ActiveInteractable.State == InteractionState.Select)
+            if (ActiveInteractable && ActiveInteractable.State == InteractionState.Select)
             {
                 SetActiveInteractableState(InteractionState.Hover);
             }
