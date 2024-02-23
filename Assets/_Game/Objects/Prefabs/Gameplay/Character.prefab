@@ -465,7 +465,7 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  _rayDistance: 100
+  _rayDistance: 5
   _interactionButton:
     m_UseReference: 1
     m_Action:

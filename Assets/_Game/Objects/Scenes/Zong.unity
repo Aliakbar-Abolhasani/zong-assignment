@@ -1012,7 +1012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &157813943
 Transform:
   m_ObjectHideFlags: 0
@@ -1021,13 +1021,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157813942}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.349, y: 2.383, z: 0.746}
-  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 0.79999995}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.74600005, y: 2.383, z: -0.3490001}
+  m_LocalScale: {x: 0.7999998, y: 0.79999995, z: 0.7999998}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 276004946}
-  m_Father: {fileID: 294024040}
+  m_Father: {fileID: 343923382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &180244407
 PrefabInstance:
@@ -2038,7 +2038,6 @@ Transform:
   m_Children:
   - {fileID: 1226168353}
   - {fileID: 343923382}
-  - {fileID: 157813943}
   - {fileID: 1025101658}
   - {fileID: 1415607464}
   - {fileID: 2119176751}
@@ -2488,13 +2487,14 @@ Transform:
   m_GameObject: {fileID: 343923381}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1974064306}
   - {fileID: 1046665557}
   - {fileID: 1296495417}
+  - {fileID: 157813943}
   m_Father: {fileID: 294024040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &370731713
@@ -7723,9 +7723,9 @@ Transform:
   - {fileID: 1630499464}
   - {fileID: 26128362}
   - {fileID: 2082806489}
+  - {fileID: 1856476263}
   - {fileID: 2111295280}
   - {fileID: 567653023}
-  - {fileID: 1856476263}
   - {fileID: 112593517}
   - {fileID: 206232151}
   - {fileID: 370731714}
@@ -7750,9 +7750,9 @@ MonoBehaviour:
   - {fileID: 1630499465}
   - {fileID: 26128363}
   - {fileID: 2082806490}
+  - {fileID: 1856476264}
   - {fileID: 2111295281}
   - {fileID: 567653024}
-  - {fileID: 1856476264}
   - {fileID: 112593518}
   - {fileID: 206232152}
   - {fileID: 370731715}
@@ -11448,7 +11448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f86bf3fa05b4d4795f9d57ea5fd5486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delay: 0.2
+  _delay: 0.8
 --- !u!1 &2119176750
 GameObject:
   m_ObjectHideFlags: 0
